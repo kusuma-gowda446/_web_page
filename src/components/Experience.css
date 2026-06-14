@@ -1,0 +1,185 @@
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.experience-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.exp-icon-wrapper {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.exp-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.exp-role {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.exp-funding {
+  margin-bottom: 1.5rem;
+}
+
+.exp-points {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.exp-points li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.exp-points li::before {
+  content: '•';
+  color: var(--accent-color);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal Styles */
+.exp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.exp-modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 1rem;
+  padding: 0;
+  background-color: var(--bg-color);
+}
+
+.dark-mode .exp-modal-content {
+  background-color: var(--bg-secondary);
+}
+
+.exp-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.exp-modal-close:hover {
+  background: var(--accent-color);
+}
+
+.exp-modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-modal-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.dark-mode .exp-modal-image {
+  background-color: #2a2a2a;
+}
+
+.exp-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exp-modal-info {
+  padding: 2rem;
+}
+
+.exp-modal-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.dark-mode .exp-modal-info h2 {
+  color: var(--text-primary);
+}
+
+.exp-modal-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .exp-modal-body {
+    flex-direction: row;
+  }
+  .exp-modal-image {
+    width: 40%;
+    height: auto;
+    min-height: 400px;
+  }
+  .exp-modal-info {
+    width: 60%;
+    padding: 3rem;
+  }
+}

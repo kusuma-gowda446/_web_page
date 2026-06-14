@@ -1,0 +1,61 @@
+.vision-section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.vision-content {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  border: none;
+}
+
+.vision-icon {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.vision-title {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.dark-mode .vision-title {
+  color: white;
+}
+
+.vision-text {
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+
+.vision-decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  opacity: 0.5;
+}
+
+.vision-line {
+  height: 2px;
+  width: 50px;
+  background-color: white;
+}
+
+.vision-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+}
